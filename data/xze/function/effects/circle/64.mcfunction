@@ -62,4 +62,3 @@ $execute positioned ~ ~ ~ facing ^-0.38268343 ^0.92387956 ^ positioned ^ ^ ^$(ra
 $execute positioned ~ ~ ~ facing ^-0.2902844 ^0.9569404 ^ positioned ^ ^ ^$(radius) run particle $(particle)
 $execute positioned ~ ~ ~ facing ^-0.19509023 ^0.9807853 ^ positioned ^ ^ ^$(radius) run particle $(particle)
 $execute positioned ~ ~ ~ facing ^-0.09801677 ^0.9951848 ^ positioned ^ ^ ^$(radius) run particle $(particle)
-
