@@ -1,0 +1,8 @@
+$execute align xyz positioned ~ ~ ~ run particle $(particle)
+$execute align xyz positioned ~ ~ ~1 run particle $(particle)
+$execute align xyz positioned ~ ~1 ~ run particle $(particle)
+$execute align xyz positioned ~ ~1 ~1 run particle $(particle)
+$execute align xyz positioned ~1 ~ ~ run particle $(particle)
+$execute align xyz positioned ~1 ~ ~1 run particle $(particle)
+$execute align xyz positioned ~1 ~1 ~ run particle $(particle)
+$execute align xyz positioned ~1 ~1 ~1 run particle $(particle)
