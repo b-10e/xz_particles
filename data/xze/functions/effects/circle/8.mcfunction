@@ -1,8 +1,0 @@
-$execute positioned ~ ~ ~ facing ^0 ^1 ^ positioned ^ ^ ^$(radius) run particle $(particle)
-$execute positioned ~ ~ ~ facing ^0.70710677 ^0.70710677 ^ positioned ^ ^ ^$(radius) run particle $(particle)
-$execute positioned ~ ~ ~ facing ^1 ^-0.00000004371139 ^ positioned ^ ^ ^$(radius) run particle $(particle)
-$execute positioned ~ ~ ~ facing ^0.70710677 ^-0.70710677 ^ positioned ^ ^ ^$(radius) run particle $(particle)
-$execute positioned ~ ~ ~ facing ^-0.00000008742278 ^-1 ^ positioned ^ ^ ^$(radius) run particle $(particle)
-$execute positioned ~ ~ ~ facing ^-0.7071069 ^-0.70710665 ^ positioned ^ ^ ^$(radius) run particle $(particle)
-$execute positioned ~ ~ ~ facing ^-1 ^0.000000011924881 ^ positioned ^ ^ ^$(radius) run particle $(particle)
-$execute positioned ~ ~ ~ facing ^-0.70710653 ^0.707107 ^ positioned ^ ^ ^$(radius) run particle $(particle)
