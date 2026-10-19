@@ -11,12 +11,12 @@ This datapack is purely a library, and contains no ticking function. It exists o
 <summary>Lightning</summary>
 
 ### Functions:
-`xze:effects/lightning/spawn`
+`xze:fx/lightning/spawn`
 - Must be run **at** the origin point, and **as** the entity to move towards
   - To target a location instead, spawn a marker there and run as that
 
 ### Examples:
-`execute positioned ~ ~ ~ as @p run function xze:effects/lightning/spawn`
+`execute positioned ~ ~ ~ as @p run function xze:fx/lightning/spawn`
 - Put this in a repeating command block and see what happens
 
 ### Notes:
@@ -33,14 +33,14 @@ This datapack is purely a library, and contains no ticking function. It exists o
 # IN BETA, USE AT YOUR OWN RISK
 
 ### Functions:
-`xze:effects/spiral/spawn_with {particle:"<particle>",radius:<num>,period:<num>}`
+`xze:fx/spiral/spawn_with {particle:"<particle>",radius:<num>,period:<num>}`
 - Must be run **at** the origin point, and **as** the entity to move towards
   - To target a location instead, spawn a marker there and run as that
 - Draws a columnal spiral between the origin point and target entity with the given particle, radius, and period
   - Period is the distance the spiral moves forward between each loop
 
 ### Examples:
-`execute positioned ~ ~ ~ as @p run function xze:effects/spawn_with {particle:"minecraft:end_rod",radius:1,period:3}`
+`execute positioned ~ ~ ~ as @p run function xze:fx/spawn_with {particle:"minecraft:end_rod",radius:1,period:3}`
 - Put this in a command block, move away, and activate it
 
 ### Notes:
@@ -55,11 +55,11 @@ This datapack is purely a library, and contains no ticking function. It exists o
 <summary>Circle</summary>
 
 ### Functions:
-`function xze:effects/circle/spawn_with {particle:"<particle>",radius:<num>}` 
+`function xze:fx/circle/spawn_with {particle:"<particle>",radius:<num>}` 
 - Spawns a circle of the provided particle and radius perpendicular to the execution look direction
 
 ### Examples:
-`execute anchored eyes positioned ^ ^ ^5 run function xze:effects/circle/spawn_with {particle:"minecraft:end_rod",radius:2.5}`
+`execute anchored eyes positioned ^ ^ ^5 run function xze:fx/circle/spawn_with {particle:"minecraft:end_rod",radius:2.5}`
 
 ### PERFORMANCE IMPACT: Neglegible
 
@@ -69,14 +69,14 @@ This datapack is purely a library, and contains no ticking function. It exists o
 <summary>Block Edge Outline</summary>
 
 ### Functions:
-`function xze:effects/block_outline/spawn`
+`function xze:fx/block_outline/spawn`
 - Spawns the block edge outline effect with the default end rod particle
   
-`function xze:effects/block_outline/spawn_with {particle:"<particle>"}` 
+`function xze:fx/block_outline/spawn_with {particle:"<particle>"}` 
 - Spawns the block edge outline effect using the provided particle
 
 ### Examples:
-`function xze:effects/block_outline/spawn_with {particle:"minecraft:flame"}` 
+`function xze:fx/block_outline/spawn_with {particle:"minecraft:flame"}` 
 
 ### Notes:
 - Automatically snaps to the block grid
@@ -89,11 +89,11 @@ This datapack is purely a library, and contains no ticking function. It exists o
 <summary>Block Verticies</summary>
 
 ### Functions:
-`function xze:effects/block_outline/spawn_with {particle:"<particle>"}` 
+`function xze:fx/block_outline/spawn_with {particle:"<particle>"}` 
 - Spawns the provided particle at the 8 corners of the block
 
 ### Examples:
-`function xze:effects/block_outline/spawn_with {particle:"minecraft:flame"}`
+`function xze:fx/block_outline/spawn_with {particle:"minecraft:flame"}`
 
 ### Notes:
 - Automatically snaps to the block grid
@@ -106,13 +106,13 @@ This datapack is purely a library, and contains no ticking function. It exists o
 <summary>Line</summary>
 
 ### Functions:
-`xze:effects/line/spawn_with {particle:"<particle>"}`
+`xze:fx/line/spawn_with {particle:"<particle>"}`
 - Must be run **at** the origin point, and **as** the entity to move towards
   - To target a location instead, spawn a marker there and run as that
 - Spawns a line of particles between the origin point and target entity
   
 ### Examples:
-`execute positioned ^ ^ ^10 as @p run function xze:effects/line/spawn_with {particle:"minecraft:end_rod"}`
+`execute positioned ^ ^ ^10 as @p run function xze:fx/line/spawn_with {particle:"minecraft:end_rod"}`
 
 ### PERFORMANCE IMPACT: Low
 
