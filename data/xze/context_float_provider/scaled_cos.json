@@ -1,0 +1,18 @@
+{
+	"type": "minecraft:mul",
+	"inputs": [
+		{
+			"type": "minecraft:cos",
+			"input": {
+				"type": "minecraft:storage",
+				"storage": "xze:temp",
+				"path": "angle"
+			}
+		},
+		{
+			"type": "minecraft:storage",
+			"storage": "xze:temp",
+			"path": "radius"
+		}
+	]
+}

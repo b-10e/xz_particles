@@ -1,0 +1,52 @@
+{
+	"type": "minecraft:add",
+	"inputs": [
+		{
+			"type": "minecraft:mul",
+			"inputs": [
+				{
+					"type": "minecraft:div",
+					"left": {
+						"type": "minecraft:mod",
+						"left": {
+							"type": "minecraft:mul",
+							"inputs": [
+								{
+									"type": "minecraft:from_int",
+									"input": {
+										"type": "minecraft:score",
+										"target": {
+											"type": "fixed",
+											"name": "#xze.spiral.iter_count"
+										},
+										"score": "xze.int"
+									}
+								},
+								0.1
+							]
+						},
+						"right": {
+							"type": "minecraft:storage",
+							"storage": "xze:temp",
+							"path": "period"
+						}
+					},
+					"right": {
+						"type": "minecraft:storage",
+						"storage": "xze:temp",
+						"path": "period"
+					}
+				},
+				{
+					"type": "minecraft:constant",
+					"value": 6.283185307179586
+				}
+			]
+		},
+		{
+			"type": "minecraft:storage",
+			"storage": "xze:temp",
+			"path": "starting_angle"
+		}
+	]
+}
