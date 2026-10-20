@@ -1,8 +1,12 @@
 ## A Collection of Novel Visual Effects
 
-xokz's Particle Effects provides several unique effects for datapackers and mapmakers.
+xokz's Particle Effects provides several useful effects for datapackers and mapmakers.
 
 This datapack is purely a library, and contains no ticking function. It exists only to be called by other datapacks, and/or to be modified.
+
+Run `/function xze:demo/laser` or `/function xze:demo/ball` for a demo!
+
+----
 
 ### Effect Catalog
 
@@ -25,12 +29,6 @@ This datapack is purely a library, and contains no ticking function. It exists o
 
 ----
 
-### Notes:
-- To change the lightning segment length and angles, you can change the ranges in the `generate_pitch_yaw_len.mcfunction` function
-- To change the chance of a branch being made, change the value in the `lightning_branch_chance.json` predicate
-
-----
-
 ### TPS Impact: Low
 
 ----
@@ -47,7 +45,7 @@ This datapack is purely a library, and contains no ticking function. It exists o
 - `particle`: `String` | Particle the spiral is drawn with
 - `radius`: `Number` | Radius of the spiral, in blocks
 - `period`: `Number` | Distance required for the spiral to complete a full rotation, in blocks
-- `angle`: `Number` | The *starting* rotation angle of the spiral, in radians. If you aren't sure, use 0
+- `angle`: `Number` | The *starting* rotation angle of the spiral, in radians. If unsure, use 0
 - Must be run **at** the origin point, and **as** the entity to move towards
   - To target a location instead, spawn a marker there and run as that
 
@@ -60,7 +58,7 @@ This datapack is purely a library, and contains no ticking function. It exists o
 ----
 
 ### Notes:
-- Increase the gamerule `max_command_sequence_length` to a larger number like 1000000, otherwise your spiral may get cut off
+- Increase the gamerule `max_command_sequence_length` to a larger number like 1000000, otherwise the spiral may get cut off
 
 ----
 
@@ -173,6 +171,8 @@ This datapack is purely a library, and contains no ticking function. It exists o
 <details>
 <summary>Block Corners</summary>
 
+----
+
 ### Functions:
 `function xze:fx/block_verticies/spawn_with {...}` | Draws a particle on the 8 corners of a block
 - `particle`: `String` | Particles that are spawned
@@ -195,4 +195,62 @@ This datapack is purely a library, and contains no ticking function. It exists o
 
 </details>
 
-Run `/function xze:demo/laser` or `/function xze:demo/ball` for a demo!
+----
+
+### The Marker
+
+Several effects use both an origin point an an entity for performance and ease of implementation.
+While this can be very convenient for drawing an effect bewteen a point and a target, it can be
+difficult when the desired destination is not an entity, or specifically not the feet of an entity.
+
+For this reason there is a set of helper functions that spawns and removes a marker.
+This marker has a fixed UUID, making it extremely fast to select, and removes the need for an `@e` or `@n`.
+
+The Marker's UUID: `91b50803-54c7-44b9-8a3d-6384cfa2939d`
+
+For example, To draw a lightning bolt between positions `0 10 0` and `20 10 20`, a function like this could be used:
+```
+execute positioned 20 10 20 run function xze:marker/spawn
+execute positioned 0 10 0 as 91b50803-54c7-44b9-8a3d-6384cfa2939d run function xze:fx/lightning/spawn_with {particle:"minecraft:electric_spark"}
+function xze:marker/delete
+```
+Critically, it is important that this marker does not get unloaded. Thus, it should be deleted as soon as it is no longer needed.
+
+</details>
+
+<details>
+<summary>Functions</summary>
+  
+`xze:marker/spawn` | Spawns the marker at the context location. If the marker is already spawned, teleports it there instead
+
+`xze:marker/delete` | Deletes the marker via `/kill`
+
+`xze:marker/tp` | Teleports the marker to the context location
+
+</details>
+
+----
+
+### Tips and Tricks
+
+</details>
+
+<details>
+<summary>Moving Effects</summary>
+  
+----
+
+Every effect takes in a `particle` argument. This argument typically takes the form of a simple particle name, like `"minecraft:flame"`.
+However, the macro itself is just the arguments for the `/particle` command internally, which means that additional
+arguments can be provided in the field in every effect (except for the moving block outline effect). For example, this can be used
+to create an expanding sphere, like so: 
+
+`/execute at @s anchored eyes positioned ^ ^ ^10 run function xze:fx/sphere/spawn_with {particle:"minecraft:end_rod ~ ~ ~ ^ ^ ^100000 0.000002 0 force",radius:4}`
+
+- The speed is controlled by the Speed argument, the `0.000002`. Very small changes can make big differences.
+- The direction is controlled by the last value in the Delta argument, the `^100000`. Making this value negative (`^-100000`) will
+cause the sphere to contract instead.
+
+----
+
+</details>
