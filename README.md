@@ -1,8 +1,8 @@
 ## A Collection of Novel Visual Effects
 
-xokz's Particle Effects aims to provide several useful particle effects for datapack creation.
+xokz's Particle Effects provides several unique effects for datapackers and mapmakers.
 
-This datapack is purely a library, and contains no ticking function. It exists only to be called by other datapacks, or to be modified.
+This datapack is purely a library, and contains no ticking function. It exists only to be called by other datapacks, and/or to be modified.
 
 ### Effects
 (Check the gallery for visuals!)
