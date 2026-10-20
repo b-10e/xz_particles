@@ -5,8 +5,8 @@ execute if entity @s[distance=..0.1] run return 1
 data modify storage xze:temp angle set compute default float xze:calc_angle
 
 # draw particle
-data modify storage xze:temp sin set compute default float xze:scaled_sin
-data modify storage xze:temp cos set compute default float xze:scaled_cos
+data modify storage xze:temp sin set compute default float xze:sin
+data modify storage xze:temp cos set compute default float xze:cos
 function xze:internal/spiral/particle with storage xze:temp
 
 # move forward and loop again

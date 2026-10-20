@@ -1,1 +1,1 @@
-$execute positioned ^$(cos) ^$(sin) ^ run particle $(particle)
+$execute facing ^$(cos) ^$(sin) ^ positioned ^ ^ ^$(radius) run particle $(particle)
