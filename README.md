@@ -54,8 +54,8 @@ This datapack is purely a library, and contains no ticking function. It exists o
 ----
 
 ### Examples:
-`execute positioned ~ ~ ~ as @p run function xze:fx/spawn_with {particle:"minecraft:electric_spark",radius:1,period:2,angle:0}`
-- Put this in a command block, move away, and activate it
+`execute positioned ~ ~1 ~ as @p run function xze:fx/spiral/spawn_with {particle:"minecraft:electric_spark",radius:0.8,period:2,angle:0}`
+- Put this in a repeating command block
 
 ----
 
@@ -77,13 +77,14 @@ This datapack is purely a library, and contains no ticking function. It exists o
 ----
 
 ### Functions:
-`function xze:fx/circle/spawn_with {particle:"<particle>",radius:<num>}` 
-- Spawns a circle of the provided particle and radius perpendicular to the execution look direction
+`function xze:fx/circle/spawn_with {...}` | Draws a circle perpendicular to the context direction
+- `particle`: `String` | Particle the circle is drawn with
+- `radius`: `Number` | Radius of the circle, in blocks
 
 ----
 
 ### Examples:
-`execute anchored eyes positioned ^ ^ ^5 run function xze:fx/circle/spawn_with {particle:"minecraft:end_rod",radius:2.5}`
+`/execute anchored eyes positioned ^ ^ ^5 run function xze:fx/circle/spawn_with {particle:"minecraft:end_rod",radius:2.5}`
 
 ----
 
@@ -94,48 +95,24 @@ This datapack is purely a library, and contains no ticking function. It exists o
 </details>
 
 <details>
-<summary>Block Edge Outline</summary>
+<summary>Sphere</summary>
 
 ----
 
 ### Functions:
-`function xze:fx/block_outline/spawn_with {particle:"<particle>"}` 
-- Spawns the block edge outline effect using the provided particle
+`xze:fx/sphere/spawn_with {...}` | Draws a sphere 
+- `particle`: `String` | Particle the sphere is drawn with
+- `radius`: `Number` | Radius of the sphere, in blocks
 
 ----
-
+  
 ### Examples:
-`function xze:fx/block_outline/spawn_with {particle:"minecraft:end_rod"}` 
+`/execute anchored eyes positioned ^ ^ ^8 run function xze:fx/sphere/spawn_with {particle:"minecraft:end_rod",radius:4}`
 
 ----
 
-### Notes:
-- Automatically snaps to the block grid
-
-----
-
-### TPS Impact: None
-
-----
-
-</details>
-
-<details>
-<summary>Block Verticies</summary>
-
-### Functions:
-`function xze:fx/block_outline/spawn_with {particle:"<particle>"}` 
-- Spawns the provided particle at the 8 corners of the block
-
-### Examples:
-`function xze:fx/block_outline/spawn_with {particle:"minecraft:flame"}`
-
-### Notes:
-- Automatically snaps to the block grid
-
-----
-
-### TPS Impact: None
+### TPS Impact: Very Low
+- Very large spheres (radius >=16) may have a multi ms impact, as they run many particle commands
 
 ----
 
@@ -147,19 +124,72 @@ This datapack is purely a library, and contains no ticking function. It exists o
 ----
 
 ### Functions:
-`xze:fx/line/spawn_with {particle:"<particle>"}`
+`xze:fx/line/spawn_with {...}` | Draws a line between the context position and the context entity
+- `particle`: `String` | Particle the line is drawn with
 - Must be run **at** the origin point, and **as** the entity to move towards
   - To target a location instead, spawn a marker there and run as that
-- Spawns a line of particles between the origin point and target entity
 
 ----
   
 ### Examples:
-`execute positioned ^ ^ ^10 as @p run function xze:fx/line/spawn_with {particle:"minecraft:end_rod"}`
+`execute positioned ~ ~1 ~ as @p run function xze:fx/line/spawn_with {particle:"minecraft:electric_spark"}`
+- Put this in a repeating command block
 
 ----
 
 ### TPS Impact: Very Low
+
+----
+
+</details>
+
+<details>
+<summary>Moving Block Edge Outline</summary>
+
+----
+
+### Functions:
+`function xze:fx/block_edges_moving/spawn_with {...}` | Spawns particles that briefly move along the edge of a block
+- `particle`: `String` | Particles that are spawned
+
+----
+
+### Examples:
+`/execute anchored eyes positioned ^ ^ ^4 run function xze:fx/block_edges_moving/spawn_with {particle:"minecraft:end_rod"}` 
+
+----
+
+### Notes:
+- Automatically snaps to the block grid, no need to manually align
+
+----
+
+### TPS Impact: None
+
+----
+
+</details>
+
+<details>
+<summary>Block Corners</summary>
+
+### Functions:
+`function xze:fx/block_verticies/spawn_with {...}` | Draws a particle on the 8 corners of a block
+- `particle`: `String` | Particles that are spawned
+
+----
+
+### Examples:
+`/execute anchored eyes positioned ^ ^ ^4 run function xze:fx/block_verticies/spawn_with {particle:"minecraft:flame"}`
+
+----
+
+### Notes:
+- Automatically snaps to the block grid
+
+----
+
+### TPS Impact: None
 
 ----
 
