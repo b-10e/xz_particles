@@ -27,6 +27,8 @@ Run `/function xze:demo/laser` or `/function xze:demo/ball` for a demo!
 `execute positioned ~ ~1 ~ as @p run function xze:fx/lightning/spawn_with {particle:"minecraft:electric_spark"}`
 - Put this in a repeating command block and see what happens
 
+<img width="400" height="225" alt="lightning" src="https://github.com/user-attachments/assets/f7aca187-e37d-4a1c-93bc-73ea452fd700" />
+
 ----
 
 ### TPS Impact: Low
