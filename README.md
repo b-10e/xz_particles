@@ -55,6 +55,8 @@ Run `/function xze:demo/laser` or `/function xze:demo/ball` for a demo!
 `execute positioned ~ ~1 ~ as @p run function xze:fx/spiral/spawn_with {particle:"minecraft:electric_spark",radius:0.8,period:2,angle:0}`
 - Put this in a repeating command block
 
+<img width="400" height="225" alt="2026-10-20 21-41-41" src="https://github.com/user-attachments/assets/8ed6db4d-08c8-4cd3-bbbb-ee6b18210177" />
+
 ----
 
 ### Notes:
