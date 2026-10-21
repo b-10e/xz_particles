@@ -1,10 +1,11 @@
-## A Collection of Novel Visual Effects
-
-xokz's Particle Effects provides several useful effects for datapackers and mapmakers.
+## xokz's Particle Effects
 
 This datapack is purely a library, and contains no ticking function. It exists only to be called by other datapacks, and/or to be modified.
+It provides several useful effects for datapackers and mapmakers.
 
 Run `/function xze:demo/laser` or `/function xze:demo/ball` for a demo!
+
+<img width="400" height="225" alt="2026-10-20 22-03-59" src="https://github.com/user-attachments/assets/c929ef67-b802-4b5d-9ec4-dcdf69dee7b4" />
 
 ----
 
