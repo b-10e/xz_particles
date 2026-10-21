@@ -271,3 +271,34 @@ cause the sphere to contract instead.
 ----
 
 </details>
+
+
+</details>
+
+<details>
+<summary>1-Tick Particles</summary>
+  
+----
+
+Sometimes it may be desired to use a certain particle in an effect, but the given particle persists for too long afterwards.
+For example, spawning a `minecraft:flame` lightning bolt would result in the lightning shape lasting for several seconds.
+
+To remedy this, the Delta, Speed, and Count arguments in the `particle` field can be adjusted to make the particle disappear after a tick.
+For example:
+
+`/execute positioned ~ ~1 ~ as @p run function xze:fx/lightning/spawn_with {particle:"minecraft:flame ~ ~ ~ ^ ^ ^10000 10000 0"}`
+- Put this in a repeating command block
+
+<img width="400" height="225" alt="2026-10-20 23-01-11" src="https://github.com/user-attachments/assets/235d4eed-0609-4462-a4d4-d22b6c402772" />
+
+- This works by making the particle move so fast that they disappear the next tick.
+
+----
+
+</details>
+
+----
+
+Follows the [Smithed Datapack Conventions](https://docs.smithed.dev/conventions/)
+
+No generative AI was used in this project in any capacity.
