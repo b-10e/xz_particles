@@ -1,1 +1,1 @@
-$execute facing entity @s eyes rotated ~$(yaw) ~$(pitch) run function xze:fx/lightning/draw_end_segment/loop
+$execute facing entity @s eyes rotated ~$(yaw) ~$(pitch) run function xze:internal/lightning/draw_end_segment/loop with storage xze:temp
