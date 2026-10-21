@@ -88,6 +88,8 @@ Run `/function xze:demo/laser` or `/function xze:demo/ball` for a demo!
 ### Examples:
 `/execute anchored eyes positioned ^ ^ ^5 run function xze:fx/circle/spawn_with {particle:"minecraft:end_rod",radius:2.5}`
 
+<img width="400" height="225" alt="2026-10-20 21-50-15" src="https://github.com/user-attachments/assets/acf49c2e-ec2d-4717-9987-525b50772270" />
+
 ----
 
 ### TPS Impact: None
@@ -110,6 +112,8 @@ Run `/function xze:demo/laser` or `/function xze:demo/ball` for a demo!
   
 ### Examples:
 `/execute anchored eyes positioned ^ ^ ^8 run function xze:fx/sphere/spawn_with {particle:"minecraft:end_rod",radius:4}`
+
+<img width="400" height="225" alt="2026-10-20 21-53-06" src="https://github.com/user-attachments/assets/e1d74598-fb2a-488a-8d6c-dde5773f979f" />
 
 ----
 
@@ -137,6 +141,8 @@ Run `/function xze:demo/laser` or `/function xze:demo/ball` for a demo!
 `execute positioned ~ ~1 ~ as @p run function xze:fx/line/spawn_with {particle:"minecraft:electric_spark"}`
 - Put this in a repeating command block
 
+<img width="400" height="225" alt="2026-10-20 21-54-46" src="https://github.com/user-attachments/assets/c6444361-3273-4ed6-b2f1-eebf6f9d82d5" />
+
 ----
 
 ### TPS Impact: Very Low
@@ -158,6 +164,8 @@ Run `/function xze:demo/laser` or `/function xze:demo/ball` for a demo!
 
 ### Examples:
 `/execute anchored eyes positioned ^ ^ ^4 run function xze:fx/block_edges_moving/spawn_with {particle:"minecraft:end_rod"}` 
+
+<img width="400" height="225" alt="moving" src="https://github.com/user-attachments/assets/a4aeab14-c501-4a75-862d-3329dfd63150" />
 
 ----
 
@@ -184,7 +192,9 @@ Run `/function xze:demo/laser` or `/function xze:demo/ball` for a demo!
 ----
 
 ### Examples:
-`/execute anchored eyes positioned ^ ^ ^4 run function xze:fx/block_verticies/spawn_with {particle:"minecraft:flame"}`
+`/execute anchored eyes positioned ^ ^ ^4 run function xze:fx/block_verticies/spawn_with {particle:"minecraft:end_rod"}`
+
+<img width="400" height="225" alt="2026-10-20 21-58-07" src="https://github.com/user-attachments/assets/24d0086c-5d14-44f2-b3d8-8973bea13a23" />
 
 ----
 
@@ -250,6 +260,8 @@ arguments can be provided in the field in every effect (except for the moving bl
 to create an expanding sphere, like so: 
 
 `/execute at @s anchored eyes positioned ^ ^ ^10 run function xze:fx/sphere/spawn_with {particle:"minecraft:end_rod ~ ~ ~ ^ ^ ^100000 0.000002 0 force",radius:4}`
+
+<img width="400" height="225" alt="2026-10-20 21-59-28" src="https://github.com/user-attachments/assets/933ddbb9-4fb5-4f0e-8b58-8f915ae342fc" />
 
 - The speed is controlled by the Speed argument, the `0.000002`. Very small changes can make big differences.
 - The direction is controlled by the last value in the Delta argument, the `^100000`. Making this value negative (`^-100000`) will
