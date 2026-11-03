@@ -10,7 +10,8 @@ $data modify storage xze:temp radius set value $(radius)
 $data modify storage xze:temp start_angle set value $(start_angle)
 $data modify storage xze:temp clockwise set value $(clockwise)
 
-# set period to an integer: floor(period * 10)
+# period = floor(period * 10)
+# this is done so that the period is divisible by 1/10 for cache purposes
 execute store result score #xze.spiral.period_steps xze.int run compute default float xze:truncate_period
 execute store result storage xze:temp period int 1 run scoreboard players get #xze.spiral.period_steps xze.int
 
@@ -19,8 +20,5 @@ function xze:internal/spiral/cache/load_lut with storage xze:temp
 $data modify storage xze:temp lut[].radius set value $(radius)
 $data modify storage xze:temp lut[].particle set value $(particle)
 data modify storage xze:temp temp_lut set from storage xze:temp lut
-
-# reset iteration count
-scoreboard players set #xze.spiral.iter_count xze.int 0
 
 execute positioned ^ ^ ^ facing entity @s feet run function xze:internal/spiral/loop with storage xze:temp temp_lut[-1]
