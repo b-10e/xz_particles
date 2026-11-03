@@ -23,4 +23,4 @@ data modify storage xze:temp temp_lut set from storage xze:temp lut
 # reset iteration count
 scoreboard players set #xze.spiral.iter_count xze.int 0
 
-execute positioned ^ ^ ^ facing entity @s feet run function xze:internal/spiral/loop
+execute positioned ^ ^ ^ facing entity @s feet run function xze:internal/spiral/loop with storage xze:temp temp_lut[-1]
