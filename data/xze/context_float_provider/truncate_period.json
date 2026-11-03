@@ -1,0 +1,17 @@
+{
+	"type": "minecraft:floor",
+	"input": {
+		"type": "minecraft:mul",
+        "inputs": [
+            {
+                "type": "minecraft:storage",
+                "storage": "xze:temp",
+                "path": "period"
+            },
+            {
+                "type": "minecraft:constant",
+                "value": 10
+            }
+        ]
+	}
+}

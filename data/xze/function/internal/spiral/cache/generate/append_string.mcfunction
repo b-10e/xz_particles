@@ -1,0 +1,1 @@
+$data modify storage xze:temp spiral.lut append value "^$(cos) ^$(sin) ^"

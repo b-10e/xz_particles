@@ -48,7 +48,7 @@ Run `/function xze:demo/laser` or `/function xze:demo/ball` for a demo!
 - `particle`: `String` | Particle the spiral is drawn with
 - `radius`: `Number` | Radius of the spiral, in blocks
 - `period`: `Number` | Distance required for the spiral to complete a full rotation, in blocks
-- `angle`: `Number` | The *starting* rotation angle of the spiral, in radians. If unsure, use 0
+- `start_angle`: `Number` | The *starting* rotation angle of the spiral, in radians. If unsure, use 0
 - Must be run **at** the origin point, and **as** the entity to move towards
   - To target a location instead, spawn a marker there and run as that
 
