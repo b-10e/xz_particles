@@ -16,10 +16,9 @@ execute store result storage xze:temp period int 1 run scoreboard players get #x
 
 # load spiral lut
 function xze:internal/spiral/cache/load_lut with storage xze:temp
+$data modify storage xze:temp lut[].radius set value $(radius)
+$data modify storage xze:temp lut[].particle set value $(particle)
 data modify storage xze:temp temp_lut set from storage xze:temp lut
-
-# load radius and particle for quick access
-$data modify storage xze:cache radius_and_particle set value {radius:$(radius),particle:"$(particle)"}
 
 # reset iteration count
 scoreboard players set #xze.spiral.iter_count xze.int 0
