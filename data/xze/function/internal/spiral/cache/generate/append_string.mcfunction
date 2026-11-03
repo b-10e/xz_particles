@@ -1,1 +1,1 @@
-$data modify storage xze:temp spiral.lut append value {dir:"^$(cos) ^$(sin) ^",radius:0,particle:""}
+$data modify storage xze:temp spiral.lut prepend value {dir:"^$(cos) ^$(sin) ^",radius:0,particle:""}
