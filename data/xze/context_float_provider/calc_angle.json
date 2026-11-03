@@ -32,17 +32,6 @@
 				{
 					"type": "minecraft:constant",
 					"value": 6.283185307179586
-				},
-				{
-					"type": "minecraft:from_int",
-					"input": {
-						"type": "minecraft:score",
-							"target": {
-								"type": "fixed",
-								"name": "#xze.spiral.angle_multiplier"
-							},
-						"score": "xze.int"
-					}
 				}
 			]
 		},

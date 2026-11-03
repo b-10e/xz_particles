@@ -1,8 +1,24 @@
 {
-	"type": "minecraft:sin",
-	"input": {
-		"type": "minecraft:storage",
-		"storage": "xze:temp",
-		"path": "angle"
-	}
+	"type": "minecraft:mul",
+	"inputs": [
+		{
+			"type": "minecraft:sin",
+			"input": {
+				"type": "minecraft:storage",
+				"storage": "xze:temp",
+				"path": "angle"
+			}
+		},
+		{
+			"type": "minecraft:from_int",
+			"input": {
+				"type": "minecraft:score",
+					"target": {
+						"type": "fixed",
+						"name": "#xze.spiral.angle_multiplier"
+					},
+				"score": "xze.int"
+			}
+		}
+	]
 }

@@ -11,8 +11,8 @@ $data modify storage xze:temp start_angle set value $(start_angle)
 $data modify storage xze:temp clockwise set value $(clockwise)
 
 # set period to an integer: floor(period * 10)
-data modify storage xze:temp period set compute default float xze:truncate_period
-execute store result score #xze.spiral.period_steps xze.int run data get storage xze:temp period
+execute store result score #xze.spiral.period_steps xze.int run compute default float xze:truncate_period
+execute store result storage xze:temp period int 1 run scoreboard players get #xze.spiral.period_steps xze.int
 
 # load spiral lut
 function xze:internal/spiral/cache/load_lut with storage xze:temp
