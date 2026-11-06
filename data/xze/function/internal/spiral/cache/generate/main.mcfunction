@@ -1,5 +1,3 @@
-say generate!
-
 # create empty lut
 data modify storage xze:temp spiral set value {lut:[]}
 data modify storage xze:temp spiral.clockwise set from storage xze:temp clockwise
